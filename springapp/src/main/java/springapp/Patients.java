@@ -1,9 +1,16 @@
 package springapp;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class Patients {
 
+	@Column(name="id")
 	private String id;
+	@Column(name="name")
 	private String name;
+	@Column(name="company")
 	private String description;
 
 	public Patients() {}

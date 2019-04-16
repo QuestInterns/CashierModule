@@ -14,11 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class PatientsController {
 	@Autowired
 	private PatientsService patientsService;
+	@Autowired
+	private PatientsRepository patientsRepository;
 	
 	@RequestMapping("/patients")
 	public List<Patients> getAllPatients()
 	{
 		return patientsService.getAllPatients();
+		//return patientsRepository.findAll();
 	}
 	
 	@RequestMapping("patients/{id}")
